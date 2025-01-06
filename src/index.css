@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --primary-color: #203090;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #203040;
+  padding: 0;
+}
+a:hover {
+  color: #f08040;
+}
+/** ===== HEADER SECTION ===== **/
+.dean {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.hod {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+}
+.hod a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.nav {
+  background-color: #4ED;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  justify-content: end;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+  color: blueviolet;
+  /* height: 3%; */
+  padding: 1rem;
+}
+.search-form input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  color: gray;
+  border-radius: 10px;
+}
+.search-form input:hover {
+  border: 1px solid #7676fc;
+}
+.demo-links {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+.demo-links a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.elem {
+  display: flex;
+  align-items: center;justify-content: space-evenly;
+  gap: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.elem-p {
+  font-size: 30px;
+  color: transparent;
+  font-weight: 600;
+  -webkit-text-stroke: 2.2px indianred;
+}
+.elem-p:hover {
+  color: #3b7c3b;
+}
+
+/** ===== MAIN SECTION ===== **/
+.main {
+  display: grid;
+  color: aliceblue;
+  margin-top: 10%;
+  padding: 8rem;
+}
+.home {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.home-h2 {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem 4rem;
+}
+.home-land {
+  display: block;
+  margin-top: 5%;
+  border: 2px solid silver;
+  width: 20%;
+  padding: 2rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+}
+.home-land:hover {
+  background-color: #fee3e7;
+  transition: .3s ease-in-out;
+  opacity: 1;
+}
+.home-land a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.btn {
+  background-color: #330112;
+  color: #fff;
+  padding: 2rem 2rem;
+  margin-left: 30%;
+}
+.image {
+  width: 50%;
+  border-radius: 1rem;
+
+}
+
+
+
+/** ===== DASHBOARD PAGE SECTION ===== **/
+.kent-pole {
+  margin-top: 25%;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+
+/** ===== ABOUT PAGE SECTION ===== **/
+.about-container {
+  margin-top: 25%;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+
+/** ===== BLOG PAGE SECTION ===== **/
+.blog-container {
+  margin-top: 25%;
+  color: #fff;
+  margin-bottom: 5rem;
+}
+
+/** ===== CONTACT PAGE SECTION ===== **/
+.contact-container {
+  margin-top: 25%;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+
+
+
+
+
+/** ===== BUTTON PAGE SECTION ===== **/
+.button-cont {
+  margin-top: 30%;
+  margin-bottom: 6rem;
+}
+/** ===== FORGOTPASSWORD PAGE SECTION ===== **/
+.forgot-container {
+  margin-top: 25%;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+
+
+/** ===== LOGIN PAGE SECTION ===== **/
+.login-container {
+  margin-top: 25%;
+ padding: 0rem;
+}
+
+
+
+/** ===== SIGNUP PAGE SECTION ===== **/
+.sign-up-container {
+  margin-top: 25%;
+  margin-bottom: 5rem;
+  color: #fff;
+  /* padding: 10rem 10rem 5rem; */
+}
+
+
+
+
+
+
+
+/** ===== FOOTER PAGE ===== **/
+.footer {
+  background-color: #0e0407;
+  padding: 8rem;
+}
+.footer-mid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: lightblue;
+  margin-bottom: 6rem;
+  text-align: center;
+  justify-content: center;
+}
+.footer-1 {
+  padding: 4rem;
+}
+.footer-last {
+  color: #fff;
+}
+.footer-last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-last a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+.footer-last a:hover {
+  color: #330112;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+
+/** ===== END OF FOOTER PAGE ===== **/
+
+
+
+/** ===== MOBILE PHONES SECTION ===== **/
+
+@media screen and (max-width: 580px) {
+    .home-land {
+      margin-left: 18%;
+    }
+    .header {
+        top: 0;
+        position: fixed;
+        margin-top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .nav {
+      background-color: #4ED;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 1rem;
+      justify-content: end;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap; /** To make it a menu bar **/
+    }
+    .products {
+        grid-template-columns: 1fr;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4%;
+    }
+
+    .footer-last {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .footer-last a {
+     text-decoration: none;
+   }
+   .footer-last a:hover {
+    color: #330112;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+    .home-land {
+      margin-left: 18%;
+    }
+    .header {
+        top: 0;
+        position: fixed;
+        margin-top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .nav {
+      background-color: #4ED;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 1rem;
+      justify-content: end;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap; /** To make it a menu bar **/
+    }
+    .products {
+        grid-template-columns: 1fr;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4%;
+    }
+
+
+    .footer-last {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .footer-last a {
+      text-decoration: none;
+    }
+    .footer-last a:hover {
+      color: #330112;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+}
+
