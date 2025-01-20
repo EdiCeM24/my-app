@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 import { Button, Navbar, TextInput } from 'flowbite-react';
 import { AiOutlineSearch } from "react-icons/ai";
 // import { FaMoon, FaSun } from 'react-icons/fa';
-
 import { useLocation } from "react-router-dom";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
-// import { dark, light } from "@clerk/themes";
+
+
 
 
 
@@ -24,7 +23,7 @@ export default function Header() {
                Edi_Mars
             </span>
           </Link>
-          <Link to='/blog' className="ml-[3%] hover:text-blue-500">
+          <Link to='/blog' className="ml-[3%] hover:text-blue-500 text-pink-700 text-xl font-semibold">
             Blog
           </Link>
           <form className="ml-48">
@@ -32,7 +31,7 @@ export default function Header() {
                type="text"
                placeholder="Search..."
                rightIcon={AiOutlineSearch}
-               className="hidden lg:inline"
+               className="hidden lg:inline text-slate-500 font-semibold"
             />
           </form>
           <Button className="w-12 h-10 lg:hidden" color="gray" pill>
@@ -45,7 +44,7 @@ export default function Header() {
             >
             </Button>
             <Link to='/login'>
-               <Button gradientDuoTone="purpleToBlue" outline>
+               <Button gradientDuoTone="purpleToBlue" outline className="font-semibold text-fuchsia-800 hover:text-white">
                   Sign In
                </Button>
             </Link>
@@ -53,36 +52,26 @@ export default function Header() {
           </div>
           <Navbar.Collapse>
             <Link to='/'>
-               <Navbar.Link active={ path === '/'} as={'div'}>
+               <Navbar.Link active={ path === '/'} as={'div'} className="text-lg font-semibold hover:text-fuchsia-500">
                   Home
                </Navbar.Link>
             </Link>
             <Link to='/about'>
-               <Navbar.Link active={ path === '/about'} as={'div'}>
+               <Navbar.Link active={ path === '/about'} as={'div'} className="text-lg font-semibold text-fuchsia-500">
                   About
                </Navbar.Link>
             </Link>
             <Link to='/projects'>
-               <Navbar.Link active={ path === '/projects'} as={'div'}>
+               <Navbar.Link active={ path === '/projects'} as={'div'} className="text-lg font-semibold text-fuchsia-500">
                   Projects
                </Navbar.Link>
             </Link>
             <Link to='/contact'>
-               <Navbar.Link active={ path === '/contact'} as={'div'}>
+               <Navbar.Link active={ path === '/contact'} as={'div'} className="text-lg font-semibold text-fuchsia-500">
                   Contact
                </Navbar.Link>
             </Link>
           </Navbar.Collapse>
-
-          <header>
-           <SignedOut>
-           <SignInButton />
-           </SignedOut>
-          <SignedIn>
-          <UserButton />
-         </SignedIn>
-        </header>
-
      </Navbar>
     )
 }

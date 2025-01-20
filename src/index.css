@@ -354,3 +354,10 @@ a:hover {
     }
 }
 
+
+@media  screen and (min-width: 1024px) {
+  .sign-up-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

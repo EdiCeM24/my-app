@@ -9,28 +9,38 @@ export default function Login() {
 
   const [ showPassword, setShowPassword ] = useState(false)
   const [ formData, setFormData ] = useState({
-    name: '',
+    username: '',
     password: '',
   })
-  const {email, password } = formData;
+  const {username, password } = formData;
 
-  function onSubmit() {}
+  function onChange(e) {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }));
+  }
+
+  function onSubmit(e) {
+    e.preventDefault()
+    alert("The form is submitted!")
+  }
 
   return (
     <div className="login-container">
-        <h2 className="ml-[40%] text-center mt-2 w-60 mb-6 text-2xl bg-slate-600 rounded-sm px-2 py-2">Register here</h2>
+        <h2 className="ml-[40%] text-center mt-2 w-60 mb-6 text-2xl bg-slate-600 text-white font-semibold hover:text-fuchsia-500 cursor-pointer rounded-sm px-2 py-2">Login here</h2>
       <section className="flex items-center justify-between bg-fuchsia-400 py-12 p-4 mb-20">
           <div className="sm:ml-[7%] mb-4 mt-10">
             <img src={ ChefLogo } className="roundeded-md" alt="Pics"/>
           </div>
-         <form className="grid flex-col p-4 w-[65%] mr-8 -mt-10">
+         <form onSubmit={onSubmit} className="grid flex-col p-4 w-[65%] mr-8 -mt-10">
           
            <Label className="text-lg font-semibold text-slate-600">User Name:</Label>
-           <input type="text" className="mt-2 text-slate-800 text-xl mb-2 rounded-md border-blue-800 outline-blue-800 transition duration-150 ease-in-out" placeholder="e.g. Doemaxy"/>
+           <input type="text" id="username" value={username} onChange={onChange} className="mt-2 text-slate-800 text-xl mb-2 rounded-md border-blue-800 outline-blue-800 transition duration-150 ease-in-out" placeholder="e.g. Doemaxy"/>
            
            <div className="">
               <Label className="text-lg font-semibold text-slate-600">Password:</Label>
-              <input type={password ? 'text' : 'password'} id="password" value={password} className="mt-2 text-slate-800 text-xl w-[100%] mb-2 rounded-md border-blue-800 outline-blue-800 transition duration-150 ease-in-out" placeholder="e.g. Fardinho24_man"/>
+              <input type={showPassword ? 'text' : 'password'} id="password" onChange={onChange} value={password} className="mt-2 text-slate-800 text-xl w-[100%] mb-2 rounded-md border-blue-800 outline-blue-800 transition duration-150 ease-in-out" placeholder="e.g. Fardinho24_man"/>
               {showPassword ? (<AiFillEyeInvisible className="absolute right-3 top-3 text-xl text-gray-700 cursor-pointer" onClick={() => setShowPassword((prevState) => !prevState)}/>
               ):(
                 <AiFillEye className="absolute right-3 top-3 text-xl text-gray-700 cursor-pointer" onClick={() => setShowPassword((prevState) => !prevState)}/>
@@ -47,7 +57,7 @@ export default function Login() {
            </div>
            
 
-           <Button type="submit" className="mt-10 text-2xl text-blue-900 font-semibold hover:text-white uppercase" onSubmit={onSubmit} outline gradientDuoTone="purpleToPink">Submit</Button>
+           <Button type="submit" className="mt-10 text-2xl text-blue-900 font-semibold hover:text-white uppercase" outline gradientDuoTone="purpleToPink">Submit</Button>
          
          
          </form>
