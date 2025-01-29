@@ -14,6 +14,8 @@ import "./Tabbutton"
 import Button from './components/Button';
 import Project from './pages/Project';
 import Ingredient from './pages/Ingredient';
+import ReducerPage from './pages/ReducerPage';
+import Task from './pages/Task';
 
 
 
@@ -39,6 +41,8 @@ function App() {
                 <Route path='/sign-up' element={<SignUp />}/>
                 <Route path='/forgot-password' element={<ForgotPassword />}/>
                 <Route path='/button' element={<Button />} /> 
+                <Route path='/reducer-page' element={<ReducerPage />}/>
+                <Route path='/tasks' element={<Task />}/>
               </Routes>
               <Footer/>
         </Router>

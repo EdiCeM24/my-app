@@ -1,7 +1,7 @@
 import ChefImg from '../Assets/chef-logo.png';
 
 export default function Ingredient() {
-  const ingredients = ["Chicken", "Oregano", "Tomatoes", "Seylles"]
+  const ingredients = ["Chicken", "Oregano", "Tomatoes", "Crayfish", "pepper", "Oil", "Maggi Sauce"]
 
   const ingredientsList = ingredients.map((ingredient, index) => {
     return <li key={index}>{ingredient}</li>
@@ -9,7 +9,7 @@ export default function Ingredient() {
   
   function onSubmit(e) {
       e.preventDefault();
-      console.log("Form Submitted!");
+      alert("Form Submitted!");
       const formData = new FormData(e.target)
       const newIngredients = formData.get("ingredient")
       ingredients.push(newIngredients)

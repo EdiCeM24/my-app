@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import ImgState from '../Assets/state.png';
 import ImgComponent from '../Assets/component.png';
 import ImgFlower from '../Assets/floer-6.jpg';
@@ -38,6 +38,7 @@ export default function Main() {
 
           <div className='mt-8 mb-2 md:-w-[76%] sm:min-w-24'>
               <h2 className='flex items-center justify-center text-fuchsia-950 font-bold font-serif'>Our Services</h2>
+              <Link to='/reducer-page'>Reducer</Link>
               <main className='mt-8 bg-slate-800 rounded-md p-8 flex m-4 gap-8 sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-3'>
 
                   <div className='border rounded-md'>

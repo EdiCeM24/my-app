@@ -66,6 +66,9 @@ export default function Header() {
                   Projects
                </Navbar.Link>
             </Link>
+            <Link to='/tasks'>
+               Task
+            </Link>
             <Link to='/contact'>
                <Navbar.Link active={ path === '/contact'} as={'div'} className="text-lg font-semibold text-fuchsia-500">
                   Contact
