@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImgState from '../Assets/state.png';
 import ImgComponent from '../Assets/component.png';
@@ -8,11 +9,20 @@ import ImgBoom from '../Assets/flower-5.jpg';
 
 
 
+
 export default function Main() {
+   // Destructuring the useState hook
+   const [count, setCount] = useState(0);
 
 
   return (
     <>
+       <div className='mt-30 text-lg p-9 text-white'>
+          <p>You clicked {count} times</p>
+         <button onClick={() => setCount(count + 1)}>
+           Click me
+         </button>
+       </div>
        <div className="mt-36 mb-40 sm:text-center sm:justify-center   sm:w-[100%]">
           <a href='/ingredient' className='ml-[70%] mb-2 text-amber-800 font-semibold'>Add Ingredient</a>
             <h2 className="flex items-center justify-center top-48 absolute mt-24 ml-72 sm:mb-3 sm:grid sm:grid-cols-2 text-slate-400 text-2xl font-bold">Launch Sites quickly with uptone for webflow</h2>
@@ -92,10 +102,12 @@ export default function Main() {
                     <p className='flex ml-52 md:ml-2 text-amber-200'>
                       Perfect works.
                     </p>
-                  </div>
-                </div>
+              </div>
+              
+              </div>
            </article>      
-         </section>
+        </section>
+      
       </div>
     </>
   )

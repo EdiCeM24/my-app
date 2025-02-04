@@ -16,6 +16,7 @@ import Project from './pages/Project';
 import Ingredient from './pages/Ingredient';
 import ReducerPage from './pages/ReducerPage';
 import Task from './pages/Task';
+import AddToCart from './components/AddToCart';
 
 
 
@@ -42,7 +43,8 @@ function App() {
                 <Route path='/forgot-password' element={<ForgotPassword />}/>
                 <Route path='/button' element={<Button />} /> 
                 <Route path='/reducer-page' element={<ReducerPage />}/>
-                <Route path='/tasks' element={<Task />}/>
+                <Route path='/tasks' element={<Task />} />
+                <Route path='/cart' element={<AddToCart/>}/>
               </Routes>
               <Footer/>
         </Router>

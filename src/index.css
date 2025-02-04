@@ -145,6 +145,14 @@ a:hover {
 
 }
 
+/** ===== TASK PAGE ===== **/
+.icons {
+  display: block;
+}
+.add {
+  display: block;
+}
+
 
 
 /** ===== DASHBOARD PAGE SECTION ===== **/
